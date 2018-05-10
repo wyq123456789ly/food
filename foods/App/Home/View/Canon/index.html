@@ -1,0 +1,102 @@
+<include file="Public/header"/>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="__PUBLIC__/home/images/logo.png" alt="Logo" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{:U('Index/index')}">平台首页</a></li>
+                <li><a href="{:U('Order/index')}">在线下单</a></li>
+                <li class="active"><a href="{:U('Canon/index')}">调试宝典</a></li>
+                <li><a href="{:U('Message/index')}">我要留言</a></li>
+                <li><a href="{:U('School/index')}">合作学校</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<header id="home" class="home">
+    <div class="overlay-fluid-block">
+
+        <div class="container text-center container1">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        <volist name="image" id="val">
+                            <div class="swiper-slide"><img src=" {$val['image']}"/></div>
+                        </volist>
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            <script src="__PUBLIC__/home/js/swiper.js"></script>
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    autoplay:true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                });
+            </script>
+        </div>
+    </div>
+</header>
+<div class="canon-content">
+    <!--<div class="canon-banner">-->
+        <!--<img src="__PUBLIC__/home/images/banner_par.png" width="960"/>-->
+    <!--</div>-->
+    <div class="canon-list">
+        <label>调试宝典</label>
+        <ul id="list_ul">
+            <li>
+                <img src="__PUBLIC__/home/images/net.png">
+                <div>
+                    <span>ASP.NET/C#调试宝典</span>
+                    <a href="https://pan.baidu.com/s/1gvluYHM2Mk8WzAdvOlbiGA">+进入</a>
+                </div>
+
+            </li>
+            <li>
+                <img src="__PUBLIC__/home/images/java.png"/>
+                <div>
+                    <span>Java/JSP调试宝典</span>
+                    <a href="https://pan.baidu.com/s/1uuZhUtrZcQIv4xesuKYjTw">+进入</a>
+                </div>
+            </li>
+            <li>
+                <img src="__PUBLIC__/home/images/android.png"/>
+                <div>
+                    <span>Android安卓调试宝典</span>
+                    <a href="https://pan.baidu.com/s/1fmmPl5-kpO-6WJCVIbFvVg">+进入</a>
+                </div>
+            </li>
+            <li>
+                <img src="__PUBLIC__/home/images/question.png"/>
+                <div>
+                    <span>PHP调试宝典</span>
+                    <a href="https://pan.baidu.com/s/1PT5wG3crdh36gDWfLNKPcg">+进入</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<include file="Public/footer"/>
